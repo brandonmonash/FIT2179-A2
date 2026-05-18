@@ -1,1 +1,0 @@
-vegaEmbed("#chart1", "js/visualization.vl.json").catch(console.error);
