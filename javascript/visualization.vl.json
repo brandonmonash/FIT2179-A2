@@ -1,12 +1,12 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "title": "Australian Temperature Over Time",
+  "title": "Australian Extreme Temperature Days",
   "data": {
     "url": "https://raw.githubusercontent.com/brandonmonash/FIT2179-A2/main/Data/ExtremeHeatDays.csv"
   },
-  "mark": "line",
+  "mark": "bar",
   "encoding": {
-    "x": {"field": "Year", "type": "temporal"},
+    "x": {"field": "Year", "type": "quantitative"},
     "y": {"field": "Temperature", "type": "quantitative"}
   },
   "config": {}
