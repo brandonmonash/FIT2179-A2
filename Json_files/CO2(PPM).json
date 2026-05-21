@@ -1,0 +1,75 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+  "description": "Stock prices of 5 Tech Companies over Time.",
+  "data": {"url": "https://raw.githubusercontent.com/brandonmonash/FIT2179-A2/main/Data/GHG01%20-%20Kennaook%20Cape%20Grim%20clean%20air%20CO2%20concentration%201976-2024.csv"},
+    "params": [
+    {
+      "name": "startYear",
+      "value": 1976,
+      "bind": {
+        "input": "range",
+        "min": 1976,
+        "max": 2024,
+        "step": 1,
+        "name": "Start Year: "
+      }
+    },
+    {
+      "name": "endYear",
+      "value": 2024,
+      "bind": {
+        "input": "range",
+        "min": 1976,
+        "max": 2024,
+        "step": 1,
+        "name": "End Year: "
+      }
+    }
+  ],
+  "width": 600,
+   "transform": [
+    {
+      "filter": "datum.YYYY > 0 && datum['CO2(ppm)'] > 0"
+    },
+    {
+      "filter": "datum.YYYY >= startYear && datum.YYYY <= endYear"
+    }
+  ],
+  "mark": {
+    "type": "line",
+    "point": true
+  },
+  "encoding": {
+    "x": {
+      "field": "YYYY",
+      "type": "quantitative",
+      "title": "Year",
+  "scale": {
+    "zero": false,
+    "nice": false
+  },
+      },
+    "y": {
+      "field": "CO2(ppm)",
+      "type": "quantitative",
+      "aggregate": "mean",
+      "scale": {
+        "domain": [300,450]
+      }
+      },
+    "tooltip": [
+      {
+        "field": "CO2(ppm)",
+        "aggregate": "mean",
+        "type": "quantitative",
+        "format": ".0f",
+        "title": "CO2(ppm)"
+      },
+      {
+        "field": "YYYY",
+        "title": "year"
+      }
+    ]
+
+  }
+}
