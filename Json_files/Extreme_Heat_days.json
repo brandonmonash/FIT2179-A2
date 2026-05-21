@@ -1,0 +1,54 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": "Australian Extreme Temperature Days",
+  "width": 800,
+  "height": 400,
+  "data": {
+    "url": "https://raw.githubusercontent.com/brandonmonash/FIT2179-A2/main/Data/T01%20-%20Australian%20extreme%20heat%20days.csv"
+  },
+
+  "params": [
+  {
+    "name": "hover",
+    "select": {"type": "point", "on": "mouseover", "clear": "mouseout"}
+  }
+],
+  "mark": {
+  "type": "bar"
+},
+  "encoding": {
+    "x": {
+      "field": "Year",
+      "type": "quantitative",
+      "axis": {"format": "d"},
+      "title": "Year",
+        "scale": {
+    "domain": [1910, 2026]
+  },
+    },
+    "y": {
+      "field": "Total",
+      "type": "quantitative",
+      "aggregate": "sum",
+      "stack": "zero",
+      "title": "Total Extreme Heat Days"
+    },
+    "opacity": {
+    "condition": {"param": "hover", "value": 1},
+    "value": 0.1
+  },
+    "tooltip": [
+      {
+        "field": "Total",
+        "type": "quantitative",
+        "format": ".0f",
+        "title": "Total Extreme Heat Days"
+      },
+      {
+        "field": "Year"
+      }
+    ]
+    
+  }
+}
+
