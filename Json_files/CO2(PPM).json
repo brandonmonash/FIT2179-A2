@@ -1,6 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
-  "description": "Stock prices of 5 Tech Companies over Time.",
+  "description": "Mean of CO2(ppm) for the past 38 years",
   "data": {"url": "https://raw.githubusercontent.com/brandonmonash/FIT2179-A2/main/Data/GHG01%20-%20Kennaook%20Cape%20Grim%20clean%20air%20CO2%20concentration%201976-2024.csv"},
     "params": [
     {
@@ -47,7 +47,7 @@
   "scale": {
     "zero": false,
     "nice": false
-  },
+  }
       },
     "y": {
       "field": "CO2(ppm)",
