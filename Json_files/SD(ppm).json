@@ -1,54 +1,63 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
-  "description": "Stock prices of 5 Tech Companies over Time.",
-  "data": {"url": "https://raw.githubusercontent.com/brandonmonash/FIT2179-A2/main/Data/GHG01%20-%20Kennaook%20Cape%20Grim%20clean%20air%20CO2%20concentration%201976-2024.csv"},
+  "data": {
+    "url": "https://raw.githubusercontent.com/brandonmonash/FIT2179-A2/main/Data/GHG01%20-%20Kennaook%20Cape%20Grim%20clean%20air%20CO2%20concentration%201976-2024.csv"
+  },
   "width": 600,
-  
   "transform": [
-      {
-        "filter": "datum.YYYY > 0 && datum['SD(ppm)'] > 0"
-      },
-      {
-      "window": [{"op": "row_number", "as": "rank_max"}],
-      "sort": [{"field": "SD(ppm)", "order": "descending"}]
-      },
-      {
-        "window": [{"op": "row_number", "as": "rank_min"}],
-        "sort": [{"field": "SD(ppm)", "order": "ascending"}]
+    { "filter": "datum.YYYY > 0 && datum['SD(ppm)'] > 0" },
+    {
+      "joinaggregate": [{ "op": "max", "field": "SD(ppm)", "as": "yearMax" }],
+      "groupby": ["YYYY"]
+    }
+  ],
+  "layer": [
+    {
+      "mark": "line",
+      "encoding": {
+        "x": {
+          "field": "YYYY",
+          "type": "quantitative",
+          "title": "Year",
+          "scale": { "zero": false, "nice": false },
+          "axis": { "format": "d" }
+        },
+        "y": {
+          "field": "SD(ppm)",
+          "type": "quantitative",
+          "aggregate": "max",
+          "title": "Standard Deviation of CO2(ppm)"
+        },
+        "color": { "value": "steelblue" },
+        "tooltip": [
+          { "field": "SD(ppm)", "aggregate": "mean", "type": "quantitative", "format": ".4f", "title": "SD CO2(ppm)" },
+          { "field": "YYYY", "title": "Year" }
+        ]
       }
-    ],
-  "mark": "line",
-  "encoding": {
-    "x": {
-      "field": "YYYY",
-      "type": "quantitative",
-      "title": "Year",
-      "scale": {
-        "zero": false,
-        "nice": false
-      },
-      "axis": {
-        "format": "d"
+    },
+    {
+      "mark": { "type": "point", "filled": true, "size": 80 },
+      "transform": [{ "filter": "datum.yearMax > 0.3" }],
+      "encoding": {
+        "x": {
+          "field": "YYYY",
+          "type": "quantitative",
+          "title": "Year",
+          "scale": { "zero": false, "nice": false },
+          "axis": { "format": "d" }
+        },
+        "y": {
+          "field": "SD(ppm)",
+          "type": "quantitative",
+          "aggregate": "max",
+          "title": "Standard Deviation of CO2(ppm)"
+        },
+        "color": { "value": "red" },
+        "tooltip": [
+          { "field": "SD(ppm)", "aggregate": "mean", "type": "quantitative", "format": ".4f", "title": "SD CO2(ppm)" },
+          { "field": "YYYY", "title": "Year" }
+        ]
       }
-      },
-    "y": {
-      "field": "SD(ppm)",
-      "type": "quantitative",
-      "aggregate":"max",
-      "title": "Standard Deviation of CO2(ppm)",
-      },
-    "tooltip": [
-      {
-        "field": "SD(ppm)",
-        "aggregate": "mean",
-        "type": "quantitative",
-        "format": ".4f",
-        "title": "Standard Deviation(ppm)"
-      },
-      {
-        "field": "YYYY",
-        "title": "year",
-      }
-    ]
-  }
+    }
+  ]
 }

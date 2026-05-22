@@ -1,0 +1,32 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+  "description": "Bar chart with text labels.",
+  "data": {
+    "url": "https://raw.githubusercontent.com/brandonmonash/FIT2179-A2/main/Data/GHG01%20-%20Kennaook%20Cape%20Grim%20clean%20air%20CO2%20concentration%201976-2024.csv"
+  },
+  "transform": [
+    {
+      "calculate": "datum['GR(ppm/yr)'] == 'NaN' ? 0 : toNumber(datum['GR(ppm/yr)'])",
+      "as": "GR_clean"
+    },
+    {
+      "calculate": "datum.GR_clean / 100",
+      "as": "GR_pct"
+    }
+  ],
+  "mark": "bar",
+  "encoding": {
+    "x": {
+      "field": "GR_pct",
+      "type": "quantitative",
+      "aggregate": "sum",
+      "title": "Max of GR(ppm/yr)",
+      "axis": { "format": ".1%" }
+    },
+    "y": {
+      "field": "YYYY",
+      "type": "ordinal",
+      "title": "Year"
+    }
+  }
+}
