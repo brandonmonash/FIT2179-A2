@@ -1,0 +1,59 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+  "title": "Minimum Temperature Over the Years",
+  "data": {
+    "url": "https://raw.githubusercontent.com/brandonmonash/FIT2179-A2/main/Data/weatherAUS.csv",
+    "format": {"type": "csv", "parse": {"Date": "date:'%Y-%m-%d'"}}
+  },
+  "transform": [
+  {
+    "filter": "datum.Location == 'Melbourne' || datum.Location == 'Sydney' || datum.Location == 'Brisbane' || datum.Location == 'Perth' || datum.Location == 'Adelaide' || datum.Location == 'Darwin' || datum.Location == 'Hobart' || datum.Location == 'Canberra'"
+  },
+  {
+    "filter": "datum.MinTemp != null && datum.MinTemp != 'NA'"
+  },
+    {
+    "filter": "year(datum.Date) >= 2008"
+  }
+],
+  "params": [
+    {
+      "name": "locationSelect",
+      "select": {"type": "point", "fields": ["Location"]},
+      "bind": "legend"
+    }
+  ],
+    "mark": {
+      "type": "line",
+      "point": {
+        "filled": false,
+        "fill": "white"
+      }
+    },
+  "encoding": {
+    "x": {
+      "field": "Date",
+      "type": "temporal",
+      "timeUnit": "year",
+      "title": "Year"
+    },
+    "y": {
+      "field": "MinTemp",
+      "type": "quantitative",
+      "aggregate": "mean",
+      "title": "Mean Min Temperature"
+    },
+    "color": {
+      "field": "Location",
+      "type": "nominal",
+    },
+    "opacity": {
+      "condition": {"param": "locationSelect", "value": 1},
+      "value": 0.1
+    },
+    "tooltip": [
+      {"field": "Location"},
+      {"field": "MinTemp", "aggregate": "mean", "format": ".1f", "title": "Mean Min Temp"}
+    ]
+  }
+}

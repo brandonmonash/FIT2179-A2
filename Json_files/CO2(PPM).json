@@ -36,7 +36,7 @@
     }
   ],
   "mark": {
-    "type": "line",
+    "type": "area",
     "point": true
   },
   "encoding": {
