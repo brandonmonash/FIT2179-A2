@@ -1,0 +1,25 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+  "data": {"url": "https://raw.githubusercontent.com/brandonmonash/FIT2179-A2/main/Data/Diurnal_Temperature_Range_anomaly.csv"},
+  "layer": [
+    {
+      "mark": "bar",
+      "encoding": {
+        "x": {"field": "Year", "type": "ordinal"},
+        "y": {"field": "diunral_temperature", "type": "quantitative"},
+        "color": {
+          "condition": {"test": "datum.diunral_temperature > 0", "value": "red"},
+          "value": "steelblue"
+        }
+      }
+    },
+    {
+      "mark": {"type": "line", "color": "black", "strokeWidth": 2},
+      "transform": [{"loess": "diunral_temperature", "on": "Year"}],
+      "encoding": {
+        "x": {"field": "Year", "type": "ordinal"},
+        "y": {"field": "diunral_temperature", "type": "quantitative"}
+      }
+    }
+  ]
+}
