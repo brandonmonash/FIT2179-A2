@@ -1,0 +1,82 @@
+State,Year,MeanMaxTemp,MeanMinTemp,MeanRainfall,RainDays,Count
+Australian Capital Territory,2007,25.09,12.55,3.22,19,61
+Australian Capital Territory,2008,20.41,7.33,1.72,78,428
+Australian Capital Territory,2009,18.3,6.51,1.85,231,1095
+Australian Capital Territory,2010,17.26,6.08,3.68,244,1095
+Australian Capital Territory,2011,17.16,5.62,2.83,236,1005
+Australian Capital Territory,2012,16.41,4.32,2.77,221,1004
+Australian Capital Territory,2013,17.99,5.02,1.83,176,1011
+Australian Capital Territory,2014,18.35,6.03,1.99,215,1095
+Australian Capital Territory,2015,17.74,5.68,1.92,215,1095
+Australian Capital Territory,2016,17.92,6.44,2.8,287,1098
+Australian Capital Territory,2017,20.15,7.4,1.44,94,528
+New South Wales,2008,23.19,14.31,2.84,121,459
+New South Wales,2009,24.02,13.29,2.29,1131,5474
+New South Wales,2010,23.11,13.24,2.81,1310,5475
+New South Wales,2011,23.11,12.95,3.09,1217,5025
+New South Wales,2012,22.72,11.98,2.85,1105,5025
+New South Wales,2013,23.93,12.65,2.7,931,5050
+New South Wales,2014,24.09,13.42,2.3,1139,5475
+New South Wales,2015,23.65,13.29,2.96,1287,5475
+New South Wales,2016,24.2,13.65,2.75,1164,5490
+New South Wales,2017,25.68,15.39,3.22,646,2639
+Northern Territory,2008,33.24,22.59,2.59,38,215
+Northern Territory,2009,31.31,18.84,2.49,102,730
+Northern Territory,2010,29.62,18.31,4.15,189,730
+Northern Territory,2011,30.1,17.39,4.27,147,670
+Northern Territory,2012,30.5,16.63,2.54,85,670
+Northern Territory,2013,31.9,17.62,1.97,158,1286
+Northern Territory,2014,32.02,17.71,2.25,204,1460
+Northern Territory,2015,31.79,17.62,2.3,173,1460
+Northern Territory,2016,32.0,18.59,2.08,235,1464
+Northern Territory,2017,31.99,18.6,4.47,146,704
+Queensland,2008,27.17,17.67,4.02,72,277
+Queensland,2009,28.09,18.58,4.49,336,1460
+Queensland,2010,27.48,19.47,5.74,458,1460
+Queensland,2011,27.18,18.04,4.58,344,1340
+Queensland,2012,27.1,18.02,4.37,290,1340
+Queensland,2013,27.69,18.54,2.88,313,1348
+Queensland,2014,27.82,18.79,3.11,299,1460
+Queensland,2015,27.95,18.93,3.75,350,1460
+Queensland,2016,28.38,19.56,2.86,303,1464
+Queensland,2017,28.8,20.41,4.69,189,704
+South Australia,2008,20.62,10.81,1.79,47,215
+South Australia,2009,23.14,11.37,1.32,280,1460
+South Australia,2010,22.07,10.82,1.54,304,1460
+South Australia,2011,22.39,11.24,1.63,276,1340
+South Australia,2012,22.2,10.3,1.17,252,1340
+South Australia,2013,22.67,11.01,1.43,296,1348
+South Australia,2014,23.42,11.19,1.23,258,1460
+South Australia,2015,22.88,10.93,0.98,242,1460
+South Australia,2016,22.56,10.99,1.86,346,1464
+South Australia,2017,24.69,12.22,1.13,103,704
+Tasmania,2008,17.15,7.65,1.4,51,215
+Tasmania,2009,18.24,8.64,2.21,193,730
+Tasmania,2010,18.58,8.49,1.86,170,730
+Tasmania,2011,18.0,8.32,1.88,172,670
+Tasmania,2012,18.12,8.1,1.54,152,670
+Tasmania,2013,18.1,8.21,2.17,164,674
+Tasmania,2014,18.82,8.45,1.47,148,730
+Tasmania,2015,18.23,7.99,1.43,159,730
+Tasmania,2016,18.59,9.17,2.33,191,732
+Tasmania,2017,20.05,9.71,1.09,62,352
+Victoria,2008,20.4,10.15,1.57,55,246
+Victoria,2009,20.9,9.34,1.44,722,3285
+Victoria,2010,20.04,9.43,2.21,886,3285
+Victoria,2011,19.96,9.57,2.33,752,3015
+Victoria,2012,19.87,8.91,1.69,759,3015
+Victoria,2013,20.37,9.1,1.71,798,3339
+Victoria,2014,21.43,9.64,1.33,720,3650
+Victoria,2015,20.94,9.03,1.2,664,3650
+Victoria,2016,20.44,9.66,1.89,950,3660
+Victoria,2017,22.68,10.65,1.36,291,1760
+Western Australia,2008,22.03,11.0,1.95,53,215
+Western Australia,2009,23.06,11.51,2.0,600,2555
+Western Australia,2010,23.54,11.33,1.51,448,2547
+Western Australia,2011,23.53,12.47,2.44,591,2342
+Western Australia,2012,23.28,11.51,2.06,530,2345
+Western Australia,2013,22.98,11.88,2.67,629,2359
+Western Australia,2014,23.53,12.15,1.91,571,2555
+Western Australia,2015,23.66,12.02,1.76,561,2555
+Western Australia,2016,22.41,11.38,2.35,704,2562
+Western Australia,2017,24.67,12.64,1.76,232,1232
