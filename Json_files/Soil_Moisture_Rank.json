@@ -1,0 +1,54 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+  "title": "Australia Root Zone Soil Moisture Over Time",
+  "width": 800,
+  "height": 300,
+  "data": {
+    "url": "https://raw.githubusercontent.com/brandonmonash/FIT2179-A2/main/Data/Historical%20-%20Australia%20-%20Root%20zone%20soil%20moisture%20%5Bpercentile%20rank%5D.csv",
+    "format": {
+      "type": "csv",
+      "parse": {"Date": "date:'%d/%m/%Y'"}
+    }
+  },
+  "layer": [
+    {
+      "mark": {"type": "point", "filled": true, "size": 60},
+      "encoding": {
+        "x": {"field": "Date", "type": "temporal", "title": "Date"},
+        "y": {
+          "field": "Root zone soil moisture  (percentile rank)",
+          "type": "quantitative",
+          "title": "Soil Moisture Percentile Rank",
+          "scale": {"domain": [0, 100]}
+        },
+        "color": {
+          "field": "Root zone soil moisture  (percentile rank)",
+          "type": "quantitative",
+          "scale": {
+            "domain": [0, 50, 60, 100],
+            "range": ["#6b3a2a", "#a0522d", "#4a7c6f", "#1a5276"]
+            },
+          "title": "Percentile Rank"
+        },
+        "tooltip": [
+          {"field": "Date", "type": "temporal", "format": "%d %b %Y", "title": "Date"},
+          {"field": "Root zone soil moisture  (percentile rank)", "type": "quantitative", "title": "Soil Moisture Percentile Rank"}
+        ]
+      }
+    },
+    {
+      "mark": {"type": "rule", "color": "red", "strokeDash": [4, 4]},
+      "encoding": {"y": {"datum": 50}}
+    },
+    {
+      "mark": {"type": "line", "color": "gray", "opacity": 0.5},
+      "transform": [
+        {"loess": "Root zone soil moisture  (percentile rank)", "on": "Date"}
+      ],
+      "encoding": {
+        "x": {"field": "Date", "type": "temporal"},
+        "y": {"field": "Root zone soil moisture  (percentile rank)", "type": "quantitative"}
+      }
+    }
+  ]
+}

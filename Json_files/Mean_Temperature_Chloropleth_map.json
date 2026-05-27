@@ -1,0 +1,41 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+  "title": "Mean Maximum Temperature by State",
+  "width": 600,
+  "height": 400,
+  "projection": {"type": "mercator"},
+  "layer": [
+    {
+      "data": {
+        "url": "https://raw.githubusercontent.com/brandonmonash/FIT2179-A2/main/Data/STE_2021_AUST_GDA2020.json",
+        "format": {"type": "topojson", "feature": "STE_2021_AUST_GDA2020"}
+      },
+      "transform": [
+        {
+          "lookup": "properties.STE_NAME21",
+          "from": {
+            "data": {
+              "url": "https://raw.githubusercontent.com/brandonmonash/FIT2179-A2/main/Data/weather_by_state_year.csv"
+            },
+            "key": "State",
+            "fields": ["MeanMaxTemp", "Year"]
+          }
+        }
+      ],
+      "mark": {"type": "geoshape", "stroke": "white"},
+      "encoding": {
+        "color": {
+          "field": "MeanMaxTemp",
+          "type": "quantitative",
+          "scale": {"scheme": "orangered"},
+          "title": "Mean Max Temp (°C)"
+        },
+        "tooltip": [
+          {"field": "properties.STE_NAME21", "title": "State"},
+          {"field": "MeanMaxTemp", "title": "Mean Max Temp (°C)", "format": ".1f"},
+          {"field": "Year", "title": "Year"}
+        ]
+      }
+    }
+  ]
+}
