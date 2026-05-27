@@ -102,6 +102,20 @@ header .logo {
     margin: 1.5rem;
 }
 
+#hero .hero-subinfo {
+    font-size: 1.25rem;
+    color: var(--accent);
+    font-weight: 500;
+    font-family: 'Source Sans 3', sans-serif;
+}
+
+#hero .subtitle {
+    font-size: 1.5rem;
+    margin-top: 1rem;
+    color: var(--muted);
+    font-family: 'Source Sans 2', sans-serif;
+}
+
 /* Body */
 
 body {
