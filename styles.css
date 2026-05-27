@@ -109,7 +109,16 @@ header .logo {
     font-family: 'Source Sans 3', sans-serif;
 }
 
-#hero .subtitle {
+#hero .subtitle1 {
+    font-size: 1rem;
+    margin-top: 1rem;
+    color: var(--muted);
+    font-family: 'Source Sans 2', sans-serif;
+    max-width: 600px;
+}
+
+
+#hero .subtitle2 {
     font-size: 1.5rem;
     margin-top: 1rem;
     color: var(--muted);
