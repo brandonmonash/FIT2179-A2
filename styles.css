@@ -25,7 +25,8 @@ header {
     position: sticky;
     top: 0;
     background: var(--surface);
-    border-top: 1px solid var(--border);
+    border-top: 2px solid var(--border);
+    border-bottom: 2px solid var(--border);
     padding: 1.5rem 0;
     font-size: 0.75rem;
     color: var(--text);
@@ -69,7 +70,7 @@ header .logo {
 }
 
 #hero .hero-title {
-  font-size: 5rem;
+  font-size: clamp(3rem, 7vw, 6rem);
   font-weight: bold;
 }
 
