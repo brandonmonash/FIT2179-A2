@@ -1,3 +1,9 @@
+/* 
+Declarations:
+AI tools (Claude, Anthropic) were used to assist with code development and debugging
+*/
+
+
 /* ── Variables ── */
 :root {
     --background:        #0d0f14;
@@ -17,11 +23,12 @@ html { scroll-behavior: smooth; }
 /* Header */
 header {
     position: sticky;
+    top: 0;
     background: var(--surface);
     border-top: 1px solid var(--border);
     padding: 3rem 0;
     font-size: 0.75rem;
-    color: var(--muted);
+    color: var(--text);
     z-index: 10;
     backdrop-filter: blur(12px);
 }
@@ -61,17 +68,21 @@ header .logo {
     border-bottom: 1px solid var(--border);
 }
 
-.hero h1 {
+#hero .hero-title {
   font-size: 5rem;
   font-weight: bold;
 }
 
-.hero p {
+#hero .hero p {
   font-size: 1.5rem;
   margin-top: 1rem;
 }
 
-.hero title_container {
+#hero .hero-title span { 
+    color: var(--accent);
+}
+
+#hero .hero-title-container {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -81,7 +92,7 @@ header .logo {
   z-index: 1;
 }
 
-.hero title {
+#hero .hero-title {
     font-family: 'playfair display', serif;
     font-weight: bold;
     font-weight: 900;
