@@ -19,6 +19,12 @@ AI tools (Claude, Anthropic) were used to assist with code development and debug
 
 html { scroll-behavior: smooth; }
 
+/* QOL */
+.container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 2rem;
+}
 
 /* Header */
 header {
@@ -155,3 +161,35 @@ body {
     line-height: 1.75;
 }
 
+footer {
+    background: var(--surface);
+    border-top: 1px solid var(--border);
+    padding: 3rem 0;
+    font-size: 0.85rem;
+    color: var(--muted);
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.footer-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.1rem;
+    color: var(--text);
+    margin-bottom: 0.5rem;
+}
+
+.footer-sources a {
+    color: var(--muted);
+    text-decoration: underline;
+}
+
+/* ── Vega embed overrides for dark theme ── */
+.vega-embed {
+    width: 100%;
+}
