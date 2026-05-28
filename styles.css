@@ -136,6 +136,14 @@ header .logo {
     font-family: 'Source Sans 2', sans-serif;
 }
 
+/* ── Divider ── */
+.divider {
+    width: 48px;
+    height: 3px;
+    background: var(--accent);
+    margin: 1.5rem 0;
+}
+
 /* Body */
 
 body {
@@ -146,3 +154,4 @@ body {
     font-size: 17px;
     line-height: 1.75;
 }
+
