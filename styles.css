@@ -190,7 +190,32 @@ footer {
 }
 
 /* Containers and Layout */
+
+.chart-container {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    padding: 1rem;
+    border-radius: 8px;
+    overflow: auto;
+    margin-bottom: 2rem;
+}
  
+.grid-2 {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: 1fr 1fr;
+    /* border: 1px solid red; */
+}
+
+.grid-3 {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: 1fr 1fr 1fr;
+    /* border: 1px solid red; */
+}
+
+
+
 /* ── Vega embed overrides for dark theme ── */
 .vega-embed {
     width: 100%;

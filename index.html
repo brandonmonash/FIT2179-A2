@@ -43,6 +43,11 @@
 
   <section id="divider"></section>
 
+  <div class="grid-2">
+    <div class="chart-container">
+    </div>
+  </div>
+
   <footer class="footer">
     <div class="container footer-content">
       <div>
@@ -52,5 +57,41 @@
       </div>
     </div>
   </footer>
+
+
+
+
+  <script>
+    const embedOpts = {
+      actions: false,
+      theme: "dark",
+      config: {
+        background: "transparent",
+        axis: { gridColor: "#262c38", labelColor: "#8a8f9e", titleColor: "#8a8f9e", domainColor: "#262c38" },
+        legend: { labelColor: "#8a8f9e", titleColor: "#8a8f9e" },
+        title: { color: "#e8e4dc" },
+        view: { stroke: "transparent" }
+      }
+    };
+
+    // Replace each URL below with your actual GitHub raw URLs
+    const charts = [
+      { id: "chart-co2",     url: "https://raw.githubusercontent.com/brandonmonash/FIT2179-A2/main/Vega/CO2_PPM_.json" },
+      { id: "chart-sd",      url: "https://raw.githubusercontent.com/brandonmonash/FIT2179-A2/main/Vega/SD_ppm_.json" },
+      { id: "chart-gr",      url: "https://raw.githubusercontent.com/brandonmonash/FIT2179-A2/main/Vega/GRperyear.json" },
+      { id: "chart-heatmap", url: "https://raw.githubusercontent.com/brandonmonash/FIT2179-A2/main/Vega/Mean_Anomaly_Temperature_Heatmap.json" },
+      { id: "chart-mintemp", url: "https://raw.githubusercontent.com/brandonmonash/FIT2179-A2/main/Vega/Minimum_Temperature_over_the_years.json" },
+      { id: "chart-maxtemp", url: "https://raw.githubusercontent.com/brandonmonash/FIT2179-A2/main/Vega/Maximum_Temperature_over_the_years.json" },
+      { id: "chart-diurnal", url: "https://raw.githubusercontent.com/brandonmonash/FIT2179-A2/main/Vega/diurnal_temperature_range_anomaly.json" },
+      { id: "chart-heat",    url: "https://raw.githubusercontent.com/brandonmonash/FIT2179-A2/main/Vega/Extreme_Heat_days.json" },
+      { id: "chart-map",     url: "https://raw.githubusercontent.com/brandonmonash/FIT2179-A2/main/Vega/Mean_Temperature_Chloropleth_map.json" },
+      { id: "chart-ph",      url: "https://raw.githubusercontent.com/brandonmonash/FIT2179-A2/main/Vega/OA1_pH_map.json" },
+      { id: "chart-soil",    url: "https://raw.githubusercontent.com/brandonmonash/FIT2179-A2/main/Vega/Soil_Moisture_Rank.json" },
+    ];
+
+    charts.forEach(({ id, url }) => {
+      vegaEmbed(`#${id}`, url, embedOpts).catch(console.error);
+    });
+  </script>
 </body>
 </head>
