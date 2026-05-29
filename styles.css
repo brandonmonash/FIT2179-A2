@@ -189,6 +189,8 @@ footer {
     text-decoration: underline;
 }
 
+/* Containers and Layout */
+ 
 /* ── Vega embed overrides for dark theme ── */
 .vega-embed {
     width: 100%;
