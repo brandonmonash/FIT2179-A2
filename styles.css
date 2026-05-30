@@ -127,10 +127,11 @@ header .logo {
 }
 
 #hero .subtitle1 {
-    font-size: 1.25rem;
+    font-size: 1rem;
     /* margin-top: 1rem; */
     color: var(--muted);
     font-family: 'Source Sans 2', sans-serif;
+    font-weight: 200;
     max-width: 600px;
 }
 
@@ -139,6 +140,7 @@ header .logo {
     font-size: 1rem;
     /* margin-top: 1rem; */
     color: var(--muted);
+    font-weight: 200;
     font-family: 'Source Sans 2', sans-serif;
 }
 
@@ -147,7 +149,7 @@ header .logo {
     width: 48px;
     height: 3px;
     background: var(--accent);
-    margin: 1.5rem 0;
+    margin: 1rem 0;
 }
 
 .space-divider {
@@ -161,13 +163,14 @@ header .logo {
 /* Body */
 
 .body-container {
-    margin: 0 auto;
-    margin-left: 5vw;
-    margin-right: 5vw;
+    margin: auto;
+    /* margin-left: 5vw;
+    margin-right: 5vw; */
+    max-width: 75vw;
 }
 
 .section {
-    padding: 80px 0;
+    padding: 30px 0;
     border-bottom: 1px solid var(--border);
 }
 
@@ -178,7 +181,7 @@ header .logo {
     letter-spacing: 0.2em;
     text-transform: uppercase;
     color: var(--accent);
-    margin-bottom: 0.75rem;
+    margin-bottom: 0.5rem;
 }
 
 .section-title {
@@ -200,6 +203,10 @@ header .logo {
 .span {
     color: var(--accent);
 }
+
+
+.section:last-child { border-bottom: none; }
+
 
 body {
     background: var(--background);
