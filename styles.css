@@ -8,6 +8,7 @@ AI tools (Claude, Anthropic) were used to assist with code development and debug
 :root {
     --background:#0d0f14;
     --surface:#161a22;
+    --surface2:#20242c;
     --border:#262c38;
     --text:#e8e4dc;
     --muted:#8a8f9e;
@@ -160,6 +161,15 @@ header .logo {
     margin: 1.5rem 0;
 }
 
+.box-content-divider {
+    width: 100%;
+    height: 1px;
+    background: var(--muted);
+    opacity: 0.3;
+    margin: 1.5rem 0;
+}
+
+
 /* Body */
 
 .body-container {
@@ -203,13 +213,33 @@ header .logo {
     font-size: 1rem;
 }
 
+.section-description {
+    font-family: 'Source Sans 1', serif;
+    color: var(--muted);
+    /* max-width: 680px; */
+    margin-bottom: 2.5rem;
+    font-size: 1rem;
+}
+
+.stat-number {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    font-weight: 900;
+    color: var(--accent);
+    line-height: 1;
+    margin-bottom: 0.5rem;
+    justify-self: center;
+}
+
+.stat-information {
+    font-family: 'Source Sans 1',monospace;
+    font-size: 0.8rem;
+    color: var(--muted);
+}
+
 .span {
     color: var(--accent);
 }
-
-
-
-
 
 body {
     background: var(--background);
@@ -258,7 +288,22 @@ footer {
     overflow: auto;
     margin-bottom: 2rem;
 }
+
+.lighter-chart-container {
+    background: var(--surface2);
+    border: 1px solid var(--border);
+    padding: 1rem;
+    border-radius: 8px;
+    overflow: auto;
+    margin-bottom: 2rem;
+}
  
+.grid-1 {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: 1fr;
+    /* border: 1px solid red; */
+}
 
 .grid-2 {
     display: grid;
@@ -274,7 +319,19 @@ footer {
     /* border: 1px solid red; */
 }
 
+.column-content-graph-container {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: 0.4fr 1fr;
+    
+}
 
+.scrollable-container {
+    max-height: 400px;
+    scrollbar-color: #333333 #525252; 
+    direction: rtl;
+    overflow-y: auto;
+}
 
 /* ── Vega embed overrides for dark theme ── */
 .vega-embed {

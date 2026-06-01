@@ -41,26 +41,72 @@
     </div>
   </section>
 
-  <section class="body-container">
+  <section class="body-container" id="atmosphere">
     
     <div class="section">
       <section class="section-label">Australia's Atmosphere</section>
-      <h2 class="section-title"><span class="span">CO₂</span> Levels Are Rising <br>And Not Stabilizing</h2>
       <section class="divider"></section>
+      <h2 class="section-title"><span class="span">CO₂</span> Levels Are Rising <br>And Not Stabilizing</h2>
+      <div class="section-description">
+        The following graphs show the rising levels of carbon dioxide in the atmosphere, its growth rate and its standard deviation. 
+        These graphs demonstrate the alarming increase in CO₂ levels over time, which is a major contributor to global warming and climate change. 
+        The data clearly indicates that CO₂ levels are not stabilizing but rather continuing to rise, posing significant challenges for environmental sustainability and climate mitigation efforts.
+      </div>
+      <div class="grid-3">
+        <div class="chart-container">
+          <div class="stat-number">+25%</div>
+          <div class="stat-information">Increase in CO₂ levels since 1910</div>
+        </div>
+        <div class="chart-container">
+          <div class="stat-number">420+</div>
+          <div class="stat-information">Current increase inCO₂ concentration (ppm)</div>
+        </div>
+        <div class="chart-container">
+          <div class="stat-number">2.4</div>
+          <div class="stat-information">Average annual growth rate of CO₂ (ppm/year)</div>
+        </div>
+        
+        
+      </div>
       <div class="grid-2">
         <div class="chart-container">
           <div id="chart-co2" class="chart"></div>
+          
+          <div class="box-content-divider"></div>
+          <div class="body">
+            This graph represents the present atmospheric carbon dioxide concentration that is measured in Parts Per Million (PPM). 
+            The area chart demonstrates a clear and upward trend in CO₂ levels throughout the recorded period (1976-2024) without any decrease. 
+            The dots in the graph represent the year that the data was recorded with its own Carbon dioxide levels in that year. 
+            This data is from CSIRO AU (https://data.csiro.au/collection/csiro:63718).
+          </div>
         </div>
         <div class="chart-container">
           <div id="chart-sd" class="chart"></div>
+          <div class="box-content-divider"></div>
+          <div class="body">
+            The data here shows the standard deviation of the carbon dioxide concentration in parts per million (PPM). 
+            The data is calculated by the standard deviation of the concentration during that time period with the red dots 
+            being the data that was recorded when it was above the threshold of 0.3 which is considered to be concerning standard deviation. 
+            Data is from CSIRO AU (https://data.csiro.au/collection/csiro:63718).
+          </div>
         </div>
       </div>
 
-      
-
     </div>
+    <div class="grid-1">
+      <div class="chart-container">
+        <div class="column-content-graph-container">
+          <div id="chart-gr" class="scrollable-container"></div>
+          <div class="lighter-chart-container" style="font-size: 1.5rem; line-height: 1.6; font-family: 'Arial, Helvetica, sans-serif';">
+            GR(ppm/year) shows the growth rate of carbon dioxide concentration in parts per million every year. 
+            It is shown in a bar graph which also indicates the amount of increase that happened within that year which is in a compounding increase. 
+            Data is from CSIRO AU (https://data.csiro.au/collection/csiro:63718).
 
-
+          </div>
+        </div>
+        
+      </div>
+    </div>
   </section>
 
   <footer class="footer">
@@ -73,8 +119,8 @@
     </div>
   </footer>
 
-
-
+  <section
+  
 
   <script>
     const embedOpts = {
